@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img {
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*movimiento de los cuadros*/
+
+#cuadro2 {
+    animation: animacion 4s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#cuadro1 {
+    animation: animacion2 2s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes animacion {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-45%);
+    }
+}
+
+@keyframes animacion2 {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(4deg);
+    }
+}
+
+
+/*movimiento de los monitos*/
+
+#mono2 {
+    animation: tambaleo 2s ease-in-out infinite alternate;
+    transform-origin: right;
+}
+
+#mono4 {
+    animation: tambaleo2 0.7s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes tambaleo {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(10deg);
+    }
+}
+
+@keyframes tambaleo2 {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(2%);
+    }
+}
+
+
+/**mono de hasta arriba*/
+
+#mono1 {
+    animation: movimiento 4.2s infinite alternate;
+    transform-origin: right;
+}
+
+@keyframes movimiento {
+    from {
+        transform: translateX(-2%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(3%);
+        opacity: 1;
+    }
+}
+
+
+/**logotipo*/
+
+#DESIGNER {
+    display: block;
+}
